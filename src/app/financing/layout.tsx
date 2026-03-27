@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Tire Financing No Credit Needed | Acima Leasing | Tire Geeks Sacramento',
-  description: 'Get tires and wheels now, pay later with Acima lease-to-own financing. No credit check, $0 down, 100 days same as cash. Apply in seconds at Tire Geeks Sacramento.',
+  title: 'Tire Financing No Credit Check Sacramento | Acima at Tire Geeks',
+  description: 'Get tires, wheels, and auto services now — pay over time with Acima. No credit check, $0 down, 100 days same as cash. Apply at Tire Geeks Sacramento.',
   openGraph: {
-    title: 'Tire Financing No Credit Needed | Tire Geeks',
-    description: 'Acima lease-to-own: no credit needed, $0 down, 100 days same as cash. Apply in seconds.',
+    title: 'Tire Financing No Credit Check | Acima at Tire Geeks',
+    description: 'No credit check financing for tires, wheels, lifts & more. $0 down, 100 days same as cash at Tire Geeks.',
     url: 'https://tiregeeks.com/financing',
   },
   alternates: { canonical: 'https://tiregeeks.com/financing' },

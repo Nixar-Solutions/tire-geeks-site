@@ -2,6 +2,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Link from 'next/link';
 import { MapPin, Phone, Clock } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { BRAND } from '@/lib/constants';
@@ -9,8 +10,8 @@ import { BRAND } from '@/lib/constants';
 gsap.registerPlugin(ScrollTrigger);
 
 const MAP_URLS = [
-  'https://maps.google.com/maps?q=3020+Florin+Road+Sacramento+CA+95822&t=&z=15&ie=UTF8&iwloc=&output=embed',
-  'https://maps.google.com/maps?q=2245+Arden+Way+Sacramento+CA+95825&t=&z=15&ie=UTF8&iwloc=&output=embed',
+  'https://www.google.com/maps?q=3020+Florin+Road+Sacramento+CA+95822&t=&z=15&ie=UTF8&iwloc=&output=embed',
+  'https://www.google.com/maps?q=2245+Arden+Way+Sacramento+CA+95825&t=&z=15&ie=UTF8&iwloc=&output=embed',
 ];
 
 export default function LocationsSection() {
@@ -158,6 +159,15 @@ export default function LocationsSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            href="/locations"
+            className="btn-ghost font-nav inline-block"
+          >
+            VIEW ALL LOCATION DETAILS &rarr;
+          </Link>
         </div>
       </div>
     </section>

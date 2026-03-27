@@ -23,5 +23,41 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
-  return <BlogPostClient post={post} />;
+
+  const blogPostingSchema = post ? {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "author": { "@type": "Organization", "name": "Tire Geeks" },
+    "datePublished": post.date,
+    "image": "https://tiregeeks.com" + post.image,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tire Geeks",
+      "logo": { "@type": "ImageObject", "url": "https://tiregeeks.com/images/logo.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://tiregeeks.com/blog/" + post.slug }
+  } : null;
+
+  const breadcrumbSchema = post ? {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tiregeeks.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tiregeeks.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": post.title, "item": "https://tiregeeks.com/blog/" + post.slug }
+    ]
+  } : null;
+
+  return (
+    <>
+      {blogPostingSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }} />
+      )}
+      {breadcrumbSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      )}
+      <BlogPostClient post={post} />
+    </>
+  );
 }

@@ -15,9 +15,20 @@ const QUICK_LINKS = [
   { label: 'Contact', href: '/contact' },
 ];
 
-const SERVICES = [
-  'Tires', 'Wheels', 'Alignment', 'Suspension',
-  'Lift Kits', 'Lowering Kits', 'Brakes', 'Struts',
+const POPULAR_SERVICES = [
+  { label: 'Tires Sacramento', href: '/services' },
+  { label: 'Custom Wheels', href: '/services' },
+  { label: 'Wheel Alignment', href: '/services' },
+  { label: 'Lift Kits', href: '/services' },
+  { label: 'Lowering Kits', href: '/services' },
+  { label: 'Brakes & Suspension', href: '/services' },
+];
+
+const BLOG_LINKS = [
+  { label: 'Best Tire Shop Sacramento', href: '/blog/best-tire-shop-sacramento' },
+  { label: 'Custom Wheels Guide', href: '/blog/custom-wheels-sacramento' },
+  { label: 'Tire Financing Options', href: '/blog/tire-financing-no-credit-check-sacramento' },
+  { label: 'Lift Kit Installation Guide', href: '/blog/lift-kit-installation-sacramento' },
 ];
 
 export default function Footer() {
@@ -72,7 +83,7 @@ export default function Footer() {
         className="w-full py-10 md:py-12 lg:py-16"
         style={{ background: 'var(--bg-primary)' }}
       >
-        <div className="max-w-[1400px] mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-8">
           {/* Column 1: Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -139,28 +150,49 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Column 3: Services */}
+          {/* Column 3: Popular Services */}
           <div>
             <h4
               className="font-nav text-[14px] font-semibold uppercase tracking-[0.12em] mb-5"
               style={{ color: 'var(--blue)' }}
             >
-              SERVICES
+              POPULAR SERVICES
             </h4>
             <nav className="flex flex-col gap-3">
-              {SERVICES.map((service) => (
+              {POPULAR_SERVICES.map((service) => (
                 <Link
-                  key={service}
-                  href="/services"
+                  key={service.label}
+                  href={service.href}
                   className="font-body text-[15px] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
                 >
-                  {service}
+                  {service.label}
                 </Link>
               ))}
             </nav>
           </div>
 
-          {/* Column 4: Locations */}
+          {/* Column 4: From Our Blog */}
+          <div>
+            <h4
+              className="font-nav text-[14px] font-semibold uppercase tracking-[0.12em] mb-5"
+              style={{ color: 'var(--red)' }}
+            >
+              FROM OUR BLOG
+            </h4>
+            <nav className="flex flex-col gap-3">
+              {BLOG_LINKS.map((post) => (
+                <Link
+                  key={post.href}
+                  href={post.href}
+                  className="font-body text-[15px] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+                >
+                  {post.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* Column 5: Locations */}
           <div>
             <h4
               className="font-nav text-[14px] font-semibold uppercase tracking-[0.12em] mb-5"

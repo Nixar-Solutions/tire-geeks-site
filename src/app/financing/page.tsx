@@ -118,6 +118,14 @@ export default function FinancingPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tiregeeks.com" },
+          { "@type": "ListItem", "position": 2, "name": "Financing", "item": "https://tiregeeks.com/financing" }
+        ]
+      }) }} />
       <Navbar />
 
       {/* ───────── HERO ───────── */}
@@ -259,6 +267,7 @@ export default function FinancingPage() {
                 src={src}
                 alt="Acima financing banner"
                 className="w-full rounded-lg hover:opacity-90 transition"
+                loading="lazy"
               />
             </a>
           ))}
@@ -277,6 +286,7 @@ export default function FinancingPage() {
                 src={src}
                 alt="Acima financing banner"
                 className="w-full rounded-lg hover:opacity-90 transition"
+                loading="lazy"
               />
             </a>
           ))}

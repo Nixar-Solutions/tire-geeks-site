@@ -15,6 +15,14 @@ export default function BlogPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tiregeeks.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tiregeeks.com/blog" }
+        ]
+      }) }} />
       <Navbar />
 
       {/* ── Hero ── */}
@@ -159,6 +167,48 @@ export default function BlogPage() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Services & Locations CTA */}
+      <section className="py-12 md:py-16 px-4 md:px-6" style={{ background: '#111111' }}>
+        <div className="max-w-7xl mx-auto">
+          <h3 className="font-heading text-[22px] md:text-[28px] font-bold uppercase text-white mb-8">
+            Our Services
+          </h3>
+          <div className="flex flex-wrap gap-3 mb-8">
+            {[
+              'Tires & Wheels',
+              'Wheel Alignment',
+              'Lift & Leveling Kits',
+              'Lowering Kits',
+              'Brakes & Suspension',
+            ].map((service) => (
+              <Link
+                key={service}
+                href="/services"
+                className="px-5 py-3 rounded-lg font-nav text-[13px] font-semibold uppercase tracking-wider text-[#F2F2F2] transition-all hover:border-[#D42B2B] hover:text-white"
+                style={{ background: '#1A1A1A', border: '1px solid #2A2A2A' }}
+              >
+                {service}
+              </Link>
+            ))}
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/locations"
+              className="btn-cta font-nav text-[14px] font-bold uppercase tracking-[0.1em] px-8 py-4 rounded inline-block no-underline text-center"
+              style={{ textDecoration: 'none' }}
+            >
+              Visit Our Sacramento Locations
+            </Link>
+            <Link
+              href="/financing"
+              className="btn-ghost font-nav text-[14px] font-bold uppercase tracking-[0.1em] px-8 py-4 rounded inline-block text-center"
+            >
+              Financing Available — No Credit Check
+            </Link>
+          </div>
         </div>
       </section>
 

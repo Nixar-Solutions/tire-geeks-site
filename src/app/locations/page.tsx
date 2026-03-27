@@ -7,8 +7,8 @@ import Button from '@/components/ui/Button';
 import { BRAND } from '@/lib/constants';
 
 const MAP_EMBEDS = [
-  'https://maps.google.com/maps?q=3020+Florin+Road+Sacramento+CA+95822&t=&z=15&ie=UTF8&iwloc=&output=embed',
-  'https://maps.google.com/maps?q=2245+Arden+Way+Sacramento+CA+95825&t=&z=15&ie=UTF8&iwloc=&output=embed',
+  'https://www.google.com/maps?q=3020+Florin+Road+Sacramento+CA+95822&t=&z=15&ie=UTF8&iwloc=&output=embed',
+  'https://www.google.com/maps?q=2245+Arden+Way+Sacramento+CA+95825&t=&z=15&ie=UTF8&iwloc=&output=embed',
 ];
 
 const SERVICES = [
@@ -36,6 +36,14 @@ const mapFilterStyle = 'none';
 export default function LocationsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tiregeeks.com" },
+          { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://tiregeeks.com/locations" }
+        ]
+      }) }} />
       <Navbar />
 
       {/* Hero Banner */}

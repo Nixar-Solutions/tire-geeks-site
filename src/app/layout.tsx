@@ -34,9 +34,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://tiregeeks.com'),
-  title: 'Tire Geeks | Sacramento Tires, Wheels, Alignment & Suspension',
-  description: "Sacramento's premier tire and wheel shop. Custom wheels, lift kits, lowering kits, alignment, and more. Two locations — no appointment needed. Financing with no credit check.",
-  keywords: 'tires sacramento, wheels sacramento, alignment sacramento, lift kits, lowering kits, tire shop near me, custom wheels, tire geeks',
+  title: 'Tire Geeks | #1 Tire & Wheel Shop in Sacramento, CA — Walk-Ins Welcome',
+  description: "Sacramento's top-rated tire & wheel shop. Tires, custom wheels, alignment, lift kits, lowering kits, brakes & suspension at two locations. No appointment needed. Financing with no credit check via Acima.",
+  keywords: 'tire shop sacramento, best tire shop sacramento, wheels sacramento, alignment sacramento, lift kits sacramento, lowering kits, tire financing no credit check, custom wheels sacramento, brakes sacramento, tire geeks',
   icons: {
     icon: [
       { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
@@ -52,8 +52,8 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   openGraph: {
-    title: 'Tire Geeks | Sacramento Tires, Wheels & Custom Builds',
-    description: 'Premium tires, custom wheels, and expert fitment in Sacramento. Walk-in service, financing available.',
+    title: 'Tire Geeks | #1 Tire & Wheel Shop in Sacramento, CA',
+    description: 'Tires, custom wheels, alignment, lift kits, lowering, brakes & suspension. Two Sacramento locations, walk-ins welcome, Acima financing.',
     url: 'https://tiregeeks.com',
     siteName: 'Tire Geeks',
     images: [{ url: '/images/og-image.jpg', width: 1200, height: 630, alt: 'Tire Geeks Sacramento' }],
@@ -62,45 +62,114 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tire Geeks | Sacramento Tires & Wheels',
-    description: 'Custom wheels, tires, lifts, and more. Two Sacramento locations.',
+    title: 'Tire Geeks | #1 Tire & Wheel Shop in Sacramento, CA',
+    description: 'Tires, wheels, alignment, lifts, lowering, brakes. Two Sacramento locations, walk-ins welcome.',
   },
   robots: { index: true, follow: true },
   alternates: { canonical: 'https://tiregeeks.com' },
+  verification: {
+    google: 'waDuc9mu7ZvQhEjBc7bIrABSG5qTCF7XW4Ev9Cg1dIE',
+  },
 };
 
 const schemaFlorin = {
   "@context": "https://schema.org",
   "@type": "TireShop",
   "name": "Tire Geeks - Florin Road",
-  "image": "https://tiregeeks.com/images/tg-brand/logo.png",
+  "image": "https://tiregeeks.com/images/og-image.jpg",
   "url": "https://tiregeeks.com",
   "telephone": "(916) 800-8786",
-  "address": { "@type": "PostalAddress", "streetAddress": "3020 Florin Road", "addressLocality": "Sacramento", "addressRegion": "CA", "postalCode": "95822", "addressCountry": "US" },
-  "geo": { "@type": "GeoCoordinates", "latitude": 38.4960, "longitude": -121.4930 },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3020 Florin Road",
+    "addressLocality": "Sacramento",
+    "addressRegion": "CA",
+    "postalCode": "95822",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 38.4966, "longitude": -121.4944 },
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "19:00" }
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    }
   ],
   "priceRange": "$$",
   "paymentAccepted": "Cash, Credit Card, Debit Card, Acima Leasing",
-  "areaServed": { "@type": "City", "name": "Sacramento" }
+  "sameAs": [
+    "https://www.facebook.com/TireGeeksSac",
+    "https://www.instagram.com/tiregeekssac/"
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Sacramento" },
+    { "@type": "Place", "name": "Pocket, Sacramento" },
+    { "@type": "Place", "name": "Land Park, Sacramento" },
+    { "@type": "City", "name": "Elk Grove" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Tire Geeks Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tire Sales & Installation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Wheels & Fitment" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "4-Wheel Alignment" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lift & Leveling Kits" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lowering Kits" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brakes & Suspension" } }
+    ]
+  }
 };
 
 const schemaArden = {
   "@context": "https://schema.org",
   "@type": "TireShop",
   "name": "Tire Geeks - Arden Way",
-  "image": "https://tiregeeks.com/images/tg-brand/logo.png",
+  "image": "https://tiregeeks.com/images/og-image.jpg",
   "url": "https://tiregeeks.com",
   "telephone": "(916) 913-8786",
-  "address": { "@type": "PostalAddress", "streetAddress": "2245 Arden Way", "addressLocality": "Sacramento", "addressRegion": "CA", "postalCode": "95825", "addressCountry": "US" },
-  "geo": { "@type": "GeoCoordinates", "latitude": 38.6010, "longitude": -121.4090 },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2245 Arden Way",
+    "addressLocality": "Sacramento",
+    "addressRegion": "CA",
+    "postalCode": "95825",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 38.5977, "longitude": -121.4202 },
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "19:00" }
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    }
   ],
   "priceRange": "$$",
   "paymentAccepted": "Cash, Credit Card, Debit Card, Acima Leasing",
-  "areaServed": { "@type": "City", "name": "Sacramento" }
+  "sameAs": [
+    "https://www.facebook.com/TireGeeksSac",
+    "https://www.instagram.com/tiregeekssac/"
+  ],
+  "areaServed": [
+    { "@type": "Place", "name": "Arden-Arcade, Sacramento" },
+    { "@type": "City", "name": "Citrus Heights" },
+    { "@type": "City", "name": "Rancho Cordova" },
+    { "@type": "City", "name": "Roseville" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Tire Geeks Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tire Sales & Installation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Wheels & Fitment" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "4-Wheel Alignment" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lift & Leveling Kits" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lowering Kits" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brakes & Suspension" } }
+    ]
+  }
 };
 
 const schemaOrg = {
@@ -108,8 +177,30 @@ const schemaOrg = {
   "@type": "Organization",
   "name": "Tire Geeks",
   "url": "https://tiregeeks.com",
-  "logo": "https://tiregeeks.com/images/tg-brand/logo.png",
-  "sameAs": ["https://www.facebook.com/TireGeeks", "https://www.instagram.com/tiregeeks"]
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://tiregeeks.com/images/logo.png"
+  },
+  "sameAs": [
+    "https://www.facebook.com/TireGeeksSac",
+    "https://www.instagram.com/tiregeekssac/"
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "(916) 800-8786",
+      "contactType": "customer service",
+      "areaServed": "Sacramento",
+      "availableLanguage": ["English", "Spanish"]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "(916) 913-8786",
+      "contactType": "customer service",
+      "areaServed": "Sacramento",
+      "availableLanguage": ["English", "Spanish"]
+    }
+  ]
 };
 
 export default function RootLayout({

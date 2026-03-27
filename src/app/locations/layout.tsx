@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Tire Geeks Locations | 3020 Florin Rd & 2245 Arden Way Sacramento',
-  description: 'Visit Tire Geeks at two Sacramento locations: 3020 Florin Road (916-800-8786) and 2245 Arden Way (916-913-8786). Open Mon-Sat 9AM-7PM, no appointment needed.',
+  title: 'Tire Geeks Locations | Florin Road & Arden Way, Sacramento CA',
+  description: 'Visit Tire Geeks at 3020 Florin Rd or 2245 Arden Way in Sacramento. Open Mon-Sat 9AM-7PM, walk-ins welcome. Call (916) 800-8786 or (916) 913-8786.',
   openGraph: {
-    title: 'Tire Geeks Locations | Sacramento',
-    description: 'Two Sacramento locations — Florin Road & Arden Way. Open Mon-Sat 9AM-7PM.',
+    title: 'Tire Geeks Locations | Sacramento CA',
+    description: 'Two Sacramento locations — Florin Road & Arden Way. Open Mon-Sat 9AM-7PM, no appointment needed.',
     url: 'https://tiregeeks.com/locations',
   },
   alternates: { canonical: 'https://tiregeeks.com/locations' },

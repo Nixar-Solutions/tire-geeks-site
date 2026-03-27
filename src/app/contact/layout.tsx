@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Tire Geeks | Sacramento Tire Shop | (916) 800-8786',
-  description: 'Contact Tire Geeks Sacramento for tires, wheels, alignment, and more. Call (916) 800-8786 or visit us at 3020 Florin Road or 2245 Arden Way.',
+  title: 'Contact Tire Geeks Sacramento | Call or Visit — No Appointment Needed',
+  description: 'Contact Tire Geeks for tires, wheels, alignment & more. Call (916) 800-8786 (Florin) or (916) 913-8786 (Arden). Walk-ins welcome Mon-Sat 9AM-7PM.',
   openGraph: {
     title: 'Contact Tire Geeks | Sacramento',
-    description: 'Get in touch — call, visit, or send us a message. Two Sacramento locations.',
+    description: 'Call, visit, or message us. Two Sacramento locations, no appointment needed.',
     url: 'https://tiregeeks.com/contact',
   },
   alternates: { canonical: 'https://tiregeeks.com/contact' },

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "About Tire Geeks | Sacramento's Car Enthusiast Tire Shop",
-  description: 'Learn about Tire Geeks — Sacramento\'s community-driven tire and wheel shop. Expert fitment, walk-in service, and a passion for cars. Two locations serving the Sacramento area.',
+  title: "About Tire Geeks | Sacramento's Trusted Tire & Wheel Experts",
+  description: "Meet the team behind Sacramento's top-rated tire & wheel shop. Expert technicians, honest pricing, and a passion for custom builds since day one.",
   openGraph: {
-    title: "About Tire Geeks | Sacramento's Car Enthusiast Tire Shop",
-    description: 'Community-driven tire and wheel shop. Expert fitment, walk-in service, and a passion for cars.',
+    title: "About Tire Geeks | Sacramento's Trusted Tire & Wheel Experts",
+    description: "Sacramento's trusted tire and wheel experts. Learn about our team, values, and commitment to quality.",
     url: 'https://tiregeeks.com/about',
   },
   alternates: { canonical: 'https://tiregeeks.com/about' },

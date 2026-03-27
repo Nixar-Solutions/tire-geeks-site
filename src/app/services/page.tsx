@@ -12,6 +12,7 @@ import {
   Check,
   Phone,
 } from 'lucide-react';
+import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
@@ -215,8 +216,75 @@ export default function ServicesPage() {
     return () => ctx.revert();
   }, []);
 
+  const serviceSchemas = [
+    {
+      "@type": "Service",
+      "name": "Tires",
+      "description": "Tire sales, professional mounting, computer balancing, flat repair, and TPMS sensor service.",
+      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks" },
+      "areaServed": { "@type": "City", "name": "Sacramento, CA" },
+      "serviceType": "Tire Sales & Installation"
+    },
+    {
+      "@type": "Service",
+      "name": "Custom Wheels",
+      "description": "Aftermarket wheel sales, expert fitment consultation, wheel and tire combo packages, and hub-centric ring installation.",
+      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks" },
+      "areaServed": { "@type": "City", "name": "Sacramento, CA" },
+      "serviceType": "Custom Wheel Sales & Fitment"
+    },
+    {
+      "@type": "Service",
+      "name": "Wheel Alignment",
+      "description": "Full 4-wheel alignment service with camber, caster, and toe adjustment. Before and after printout included. Starting at $79.",
+      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks" },
+      "areaServed": { "@type": "City", "name": "Sacramento, CA" },
+      "serviceType": "4-Wheel Alignment"
+    },
+    {
+      "@type": "Service",
+      "name": "Lift & Leveling Kits",
+      "description": "Body lifts, suspension lifts, and leveling kit installation for trucks, Jeeps, and SUVs. Post-lift alignment included. Starting at $299.",
+      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks" },
+      "areaServed": { "@type": "City", "name": "Sacramento, CA" },
+      "serviceType": "Lift & Leveling Kit Installation"
+    },
+    {
+      "@type": "Service",
+      "name": "Lowering Kits",
+      "description": "Coilover installation, lowering springs, and air suspension systems. Custom stance and fitment consulting with post-drop alignment included.",
+      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks" },
+      "areaServed": { "@type": "City", "name": "Sacramento, CA" },
+      "serviceType": "Lowering Kit Installation"
+    },
+    {
+      "@type": "Service",
+      "name": "Brakes & Suspension",
+      "description": "Brake pad and rotor replacement, caliper service, strut and shock replacement, control arm and ball joint service, and performance upgrades.",
+      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks" },
+      "areaServed": { "@type": "City", "name": "Sacramento, CA" },
+      "serviceType": "Brake & Suspension Service"
+    }
+  ];
+
+  const servicesJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": serviceSchemas
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tiregeeks.com" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://tiregeeks.com/services" }
+    ]
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <Navbar />
 
       <main>
@@ -390,6 +458,54 @@ export default function ServicesPage() {
               <a href="/contact" className="btn-ghost font-nav text-[14px] font-bold uppercase tracking-[0.1em] px-8 py-4 rounded inline-block no-underline" style={{ textDecoration: 'none' }}>
                 GET A QUOTE
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ====== RELATED ARTICLES ====== */}
+        <section style={{ background: '#111111', padding: '80px 0' }}>
+          <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="inline-block w-8 h-[3px]" style={{ background: '#D42B2B' }} />
+              <span className="font-heading text-sm tracking-[0.25em] uppercase" style={{ color: '#D42B2B' }}>
+                From Our Blog
+              </span>
+              <span className="inline-block w-8 h-[3px]" style={{ background: '#D42B2B' }} />
+            </div>
+            <h2
+              className="font-display text-white uppercase mb-10"
+              style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', lineHeight: 1.1 }}
+            >
+              Related Articles
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { title: 'Best Tire Shop in Sacramento', href: '/blog/best-tire-shop-sacramento' },
+                { title: 'Custom Wheels Guide', href: '/blog/custom-wheels-sacramento' },
+                { title: 'Wheel Alignment: Signs You Need One', href: '/blog/wheel-alignment-sacramento' },
+                { title: 'Lift Kit Installation Guide', href: '/blog/lift-kit-installation-sacramento' },
+                { title: 'Lowering Your Car: Complete Guide', href: '/blog/lowering-your-car-guide' },
+                { title: 'Brake Replacement Costs', href: '/blog/brake-replacement-cost-sacramento' },
+                { title: 'Tire Financing with No Credit Check', href: '/blog/tire-financing-no-credit-check-sacramento' },
+                { title: 'Wheels & Tires Package Deals', href: '/blog/new-wheels-and-tires-package-deals' },
+              ].map((article) => (
+                <Link
+                  key={article.href}
+                  href={article.href}
+                  className="block p-5 rounded-xl transition-all hover:border-[#D42B2B]/50 group"
+                  style={{
+                    background: '#1A1A1A',
+                    border: '1px solid rgba(255,255,255,0.05)',
+                  }}
+                >
+                  <span className="font-heading text-[16px] font-semibold text-[#F2F2F2] group-hover:text-[#D42B2B] transition-colors leading-snug block mb-2">
+                    {article.title}
+                  </span>
+                  <span className="font-nav text-[12px] uppercase tracking-wider text-[#D42B2B]">
+                    Read Article &rarr;
+                  </span>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

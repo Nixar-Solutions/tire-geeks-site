@@ -38,13 +38,15 @@ export default function BlogPreview() {
     };
   }, []);
 
-  const latestPosts = blogPosts.slice(0, 3);
+  const latestPosts = [...blogPosts]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 3);
 
   return (
     <section ref={sectionRef} className="bg-[#0D0D0D] py-16 lg:py-24">
-      <div className="max-w-[1400px] mx-auto px-6">
+      <div className="max-w-[1400px] mx-auto px-4 md:px-6">
         <SectionHeading label="FROM THE BLOG" title="LEARN FROM THE GEEKS" />
-        <p className="font-body text-[18px] text-[#9E9E9E] mt-4 mb-12">
+        <p className="font-body text-[15px] md:text-[18px] text-[#9E9E9E] mt-4 mb-8 md:mb-12">
           Expert guides, tips, and Sacramento-specific advice for every driver.
         </p>
 
@@ -59,11 +61,12 @@ export default function BlogPreview() {
               className="bg-[#141414] rounded-xl overflow-hidden border border-white/5 group block"
             >
               {/* Image */}
-              <div className="overflow-hidden h-48">
+              <div className="overflow-hidden h-40 md:h-48">
                 <img
                   src={post.image}
                   alt={post.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                  loading="lazy"
                 />
               </div>
 

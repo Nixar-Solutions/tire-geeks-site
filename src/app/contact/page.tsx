@@ -44,6 +44,14 @@ export default function ContactPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tiregeeks.com" },
+          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://tiregeeks.com/contact" }
+        ]
+      }) }} />
       <Navbar />
       <main style={{ background: BRAND.colors.bgPrimary, minHeight: '100vh' }}>
         {/* ── Hero Banner ── */}
