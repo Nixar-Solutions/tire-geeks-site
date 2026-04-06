@@ -8,6 +8,7 @@ export default function robots() {
       { userAgent: 'ClaudeBot', allow: '/' },
       { userAgent: 'anthropic-ai', allow: '/' },
       { userAgent: 'Google-Extended', allow: '/' },
+      { userAgent: 'Bingbot', allow: '/' },
     ],
     sitemap: 'https://tiregeeks.com/sitemap.xml',
   };

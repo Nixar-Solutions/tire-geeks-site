@@ -134,7 +134,8 @@ export default function AboutPage() {
                     className="font-body text-[18px] leading-[1.8] text-[#D4D4D4] mb-6"
                   >
                     Tire Geeks was born from a passion for cars and a frustration with
-                    the status quo. We saw Sacramento drivers getting overcharged at
+                    the status quo. We saw Sacramento drivers&nbsp;&mdash; from Pocket and
+                    Land Park to Arden-Arcade and Carmichael&nbsp;&mdash; getting overcharged at
                     dealerships and underserved at chain shops. So we built something
                     different&nbsp;&mdash; a shop run by actual car enthusiasts who care
                     about fitment, quality, and doing right by every customer. Whether
@@ -145,17 +146,22 @@ export default function AboutPage() {
                   <p className="font-body text-[18px] leading-[1.8] text-[#D4D4D4] mb-6">
                     From day one our mission has been simple: give Sacramento access to
                     premium wheels, tires, and suspension work at prices that
-                    don&rsquo;t hurt. We source directly from top-tier brands, cut out
-                    the middlemen, and invest in the tools and training it takes to get
-                    every install right the first time. That commitment shows in the
-                    thousands of vehicles we&rsquo;ve rolled out of the bay and in the
+                    don&rsquo;t hurt. With two locations&nbsp;&mdash;{' '}
+                    <a href="/locations/florin-road" className="text-[#D42B2B] hover:underline">Florin Road</a> serving
+                    South Sacramento, Meadowview, Elk Grove, and Rancho Cordova, and{' '}
+                    <a href="/locations/arden-way" className="text-[#D42B2B] hover:underline">Arden Way</a> serving
+                    Arden-Arcade, Citrus Heights, Fair Oaks, Roseville, and North Highlands&nbsp;&mdash;
+                    we&rsquo;ve made it easy for drivers across the greater Sacramento
+                    area to get expert service close to home. That commitment shows in the
+                    over 10,000 installations we&rsquo;ve completed and the
                     five-star reviews our customers leave behind.
                   </p>
 
                   <p className="font-body text-[18px] leading-[1.8] text-[#D4D4D4]">
                     But Tire Geeks is more than a business&nbsp;&mdash; it&rsquo;s a
                     community hub. We host car meets, sponsor local events, and open
-                    our doors to anyone who wants to talk shop. We believe the car
+                    our doors to anyone who wants to talk shop. From Natomas to
+                    Midtown, East Sacramento to North Highlands, the car
                     culture in Sacramento deserves a home base, and we&rsquo;re proud
                     to be that place. When you walk through our doors you&rsquo;re not
                     just a ticket number; you&rsquo;re part of the crew.

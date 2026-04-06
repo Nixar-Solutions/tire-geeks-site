@@ -16,12 +16,12 @@ const QUICK_LINKS = [
 ];
 
 const POPULAR_SERVICES = [
-  { label: 'Tires Sacramento', href: '/services' },
-  { label: 'Custom Wheels', href: '/services' },
-  { label: 'Wheel Alignment', href: '/services' },
-  { label: 'Lift Kits', href: '/services' },
-  { label: 'Lowering Kits', href: '/services' },
-  { label: 'Brakes & Suspension', href: '/services' },
+  { label: 'Tires Sacramento', href: '/services/tires-sacramento' },
+  { label: 'Custom Wheels Sacramento', href: '/services/wheels-sacramento' },
+  { label: 'Wheel Alignment Sacramento', href: '/services/alignment-sacramento' },
+  { label: 'Lift Kits Sacramento', href: '/services/lift-kits-sacramento' },
+  { label: 'Lowering Sacramento', href: '/services/lowering-sacramento' },
+  { label: 'Brakes Sacramento', href: '/services/brakes-sacramento' },
 ];
 
 const BLOG_LINKS = [

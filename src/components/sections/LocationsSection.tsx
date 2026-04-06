@@ -57,6 +57,7 @@ export default function LocationsSection() {
         />
         <p className="font-body text-[15px] md:text-[18px] text-[var(--text-secondary)] mt-4 mb-8 md:mb-12">
           Walk in Monday through Saturday, 9AM to 7PM. No appointment needed.
+          Serving Pocket, Land Park, Meadowview, Elk Grove, Arden-Arcade, Carmichael, Citrus Heights, Fair Oaks, Rancho Cordova, Roseville, North Highlands, Natomas, Midtown &amp; East Sacramento.
         </p>
 
         {/* Maps — shorter on mobile, full bleed */}

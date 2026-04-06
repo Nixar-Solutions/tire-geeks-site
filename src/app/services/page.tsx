@@ -449,6 +449,7 @@ export default function ServicesPage() {
             </h2>
             <p className="cta-anim font-body text-[#AAAAAA] text-lg mb-8">
               Call us or walk in today. No appointment needed for most services.
+              Serving Pocket, Land Park, Arden-Arcade, Carmichael, Citrus Heights, Elk Grove, Rancho Cordova, and all of Sacramento.
             </p>
             <div className="cta-anim flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="tel:+19168008786" className="btn-cta font-nav text-[14px] font-bold uppercase tracking-[0.1em] px-8 py-4 rounded inline-flex items-center gap-2 no-underline" style={{ textDecoration: 'none' }}>
@@ -480,12 +481,12 @@ export default function ServicesPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { title: 'Best Tire Shop in Sacramento', href: '/blog/best-tire-shop-sacramento' },
-                { title: 'Custom Wheels Guide', href: '/blog/custom-wheels-sacramento' },
-                { title: 'Wheel Alignment: Signs You Need One', href: '/blog/wheel-alignment-sacramento' },
-                { title: 'Lift Kit Installation Guide', href: '/blog/lift-kit-installation-sacramento' },
-                { title: 'Lowering Your Car: Complete Guide', href: '/blog/lowering-your-car-guide' },
-                { title: 'Brake Replacement Costs', href: '/blog/brake-replacement-cost-sacramento' },
+                { title: 'Tires in Sacramento', href: '/services/tires-sacramento' },
+                { title: 'Custom Wheels Sacramento', href: '/services/wheels-sacramento' },
+                { title: 'Wheel Alignment Sacramento', href: '/services/alignment-sacramento' },
+                { title: 'Lift Kits Sacramento', href: '/services/lift-kits-sacramento' },
+                { title: 'Lowering Sacramento', href: '/services/lowering-sacramento' },
+                { title: 'Brakes Sacramento', href: '/services/brakes-sacramento' },
                 { title: 'Tire Financing with No Credit Check', href: '/blog/tire-financing-no-credit-check-sacramento' },
                 { title: 'Wheels & Tires Package Deals', href: '/blog/new-wheels-and-tires-package-deals' },
               ].map((article) => (

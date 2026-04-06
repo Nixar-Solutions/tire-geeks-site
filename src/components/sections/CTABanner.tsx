@@ -45,7 +45,7 @@ export default function CTABanner() {
           }}
         >
           Walk in today — no appointment needed. Financing available with no
-          credit check.
+          credit check. Serving South Sacramento, Arden-Arcade &amp; surrounding areas.
         </p>
 
         <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4">

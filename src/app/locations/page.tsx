@@ -123,15 +123,20 @@ export default function LocationsPage() {
               {/* Header */}
               <div className="flex items-center gap-3 mb-6">
                 <MapPin size={28} color={BRAND.colors.red} />
-                <h2
-                  className="font-heading font-bold uppercase"
-                  style={{
-                    fontSize: 28,
-                    color: BRAND.colors.textPrimary,
-                  }}
+                <a
+                  href={index === 0 ? '/locations/florin-road' : '/locations/arden-way'}
+                  className="hover:opacity-80 transition-opacity"
                 >
-                  {BRAND.name} — {location.name}
-                </h2>
+                  <h2
+                    className="font-heading font-bold uppercase"
+                    style={{
+                      fontSize: 28,
+                      color: BRAND.colors.textPrimary,
+                    }}
+                  >
+                    {BRAND.name} — {location.name}
+                  </h2>
+                </a>
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">

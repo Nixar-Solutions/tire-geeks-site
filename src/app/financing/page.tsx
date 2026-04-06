@@ -126,6 +126,15 @@ export default function FinancingPage() {
           { "@type": "ListItem", "position": 2, "name": "Financing", "item": "https://tiregeeks.com/financing" }
         ]
       }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+        }))
+      }) }} />
       <Navbar />
 
       {/* ───────── HERO ───────── */}
@@ -356,8 +365,10 @@ export default function FinancingPage() {
         </a>
 
         <p className="font-body text-[14px] text-[#6B7280] mt-6">
-          Visit us at 3020 Florin Rd or 2245 Arden Way, Sacramento CA &bull;
-          (916) 800-8786
+          Visit us at{' '}
+          <Link href="/locations/florin-road" className="underline hover:text-white transition-colors">3020 Florin Rd</Link>{' '}or{' '}
+          <Link href="/locations/arden-way" className="underline hover:text-white transition-colors">2245 Arden Way</Link>, Sacramento CA &bull;
+          (916) 800-8786 &bull; Serving Pocket, Arden-Arcade, Elk Grove, Carmichael &amp; all of Sacramento
         </p>
       </section>
 
