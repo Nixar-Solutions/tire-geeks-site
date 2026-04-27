@@ -13,6 +13,8 @@ export default function sitemap() {
     { url: `${base}/services/lift-kits-sacramento`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
     { url: `${base}/services/lowering-sacramento`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
     { url: `${base}/services/brakes-sacramento`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${base}/services/leveling-kits-sacramento`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${base}/services/tires-and-wheels-sacramento`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
     { url: `${base}/financing`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
     { url: `${base}/gallery`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 },
     { url: `${base}/blog`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 },
