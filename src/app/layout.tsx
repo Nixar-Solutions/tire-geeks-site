@@ -1,3 +1,17 @@
+/**
+ * SCHEMA TODO — Replace TODO_REPLACE_WITH_ACTUAL_GBP_REVIEW_COUNT in
+ * aggregateRating reviewCount fields with the actual count from each
+ * Google Business Profile listing (Florin Road and Arden Way).
+ *
+ * Get current counts from:
+ *   - https://business.google.com (Florin Road profile → Reviews tab)
+ *   - https://business.google.com (Arden Way profile → Reviews tab)
+ *
+ * The placeholder string is intentionally non-numeric so Google ignores
+ * the block until real values are populated. Fake review counts violate
+ * Google's structured data guidelines and can result in manual penalty
+ * action. Do not invent numbers.
+ */
 import type { Metadata } from 'next';
 import { Bebas_Neue, Oswald, Inter, Barlow_Condensed } from 'next/font/google';
 import './globals.css';
@@ -98,6 +112,13 @@ const schemaFlorin = {
     }
   ],
   "priceRange": "$$",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "TODO_REPLACE_WITH_ACTUAL_GBP_REVIEW_COUNT",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
   "paymentAccepted": "Cash, Credit Card, Debit Card, Acima Leasing",
   "sameAs": [
     "https://www.facebook.com/p/Tire-Geeks-61573900123725/",
@@ -107,6 +128,8 @@ const schemaFlorin = {
     { "@type": "City", "name": "Sacramento" },
     { "@type": "Place", "name": "Pocket, Sacramento" },
     { "@type": "Place", "name": "Land Park, Sacramento" },
+    { "@type": "Place", "name": "Meadowview, Sacramento" },
+    { "@type": "Place", "name": "South Sacramento" },
     { "@type": "City", "name": "Elk Grove" }
   ],
   "hasOfferCatalog": {
@@ -148,6 +171,13 @@ const schemaArden = {
     }
   ],
   "priceRange": "$$",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "TODO_REPLACE_WITH_ACTUAL_GBP_REVIEW_COUNT",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
   "paymentAccepted": "Cash, Credit Card, Debit Card, Acima Leasing",
   "sameAs": [
     "https://www.facebook.com/p/Tire-Geeks-61573900123725/",
@@ -155,9 +185,15 @@ const schemaArden = {
   ],
   "areaServed": [
     { "@type": "Place", "name": "Arden-Arcade, Sacramento" },
+    { "@type": "City", "name": "Carmichael" },
     { "@type": "City", "name": "Citrus Heights" },
+    { "@type": "Place", "name": "Fair Oaks" },
     { "@type": "City", "name": "Rancho Cordova" },
-    { "@type": "City", "name": "Roseville" }
+    { "@type": "City", "name": "Roseville" },
+    { "@type": "Place", "name": "North Highlands" },
+    { "@type": "Place", "name": "Natomas, Sacramento" },
+    { "@type": "Place", "name": "Midtown, Sacramento" },
+    { "@type": "Place", "name": "East Sacramento" }
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
