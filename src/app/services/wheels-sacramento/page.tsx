@@ -52,7 +52,7 @@ const serviceSchema = {
     name: 'Tire Geeks',
     url: 'https://tiregeeks.com',
   },
-  areaServed: { '@type': 'City', name: 'Sacramento, CA' },
+  areaServed: { '@type': 'City', name: 'Sacramento' },
   serviceType: 'Custom Wheel Sales & Fitment',
 };
 

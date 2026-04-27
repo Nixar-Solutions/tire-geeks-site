@@ -36,7 +36,7 @@ const serviceSchema = {
   name: 'Tire & Wheel Packages Sacramento',
   description: 'Custom tire and wheel package sales with expert fitment, professional mounting, computer balancing, and TPMS service in Sacramento, CA.',
   provider: { '@type': 'LocalBusiness', name: 'Tire Geeks', url: 'https://tiregeeks.com' },
-  areaServed: { '@type': 'City', name: 'Sacramento, CA' },
+  areaServed: { '@type': 'City', name: 'Sacramento' },
   serviceType: 'Tire & Wheel Package Sales & Installation',
   offers: { '@type': 'Offer', priceCurrency: 'USD', price: '599', description: 'Tire & wheel packages from $599' },
 };

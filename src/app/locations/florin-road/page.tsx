@@ -39,11 +39,11 @@ const breadcrumbSchema = {
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'AutoRepair',
+  '@type': 'TireShop',
   name: 'Tire Geeks - Florin Road',
   image: 'https://tiregeeks.com/images/store-front-florin.jpg',
   url: 'https://tiregeeks.com/locations/florin-road',
-  telephone: '+19168008786',
+  telephone: '(916) 800-8786',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '3020 Florin Road',
@@ -54,8 +54,8 @@ const localBusinessSchema = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 38.496,
-    longitude: -121.493,
+    latitude: 38.4955604117297,
+    longitude: -121.47168528748884,
   },
   openingHoursSpecification: [
     {
@@ -66,10 +66,31 @@ const localBusinessSchema = {
     },
   ],
   priceRange: '$$',
+  paymentAccepted: 'Cash, Credit Card, Debit Card, Acima Leasing',
+  sameAs: [
+    'https://www.facebook.com/p/Tire-Geeks-61573900123725/',
+    'https://www.instagram.com/tire.geeks',
+  ],
   areaServed: [
     { '@type': 'City', name: 'Sacramento' },
+    { '@type': 'Place', name: 'Pocket, Sacramento' },
+    { '@type': 'Place', name: 'Land Park, Sacramento' },
+    { '@type': 'Place', name: 'Meadowview, Sacramento' },
+    { '@type': 'Place', name: 'South Sacramento' },
     { '@type': 'City', name: 'Elk Grove' },
   ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Tire Geeks Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Tire Sales & Installation' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Custom Wheels & Fitment' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '4-Wheel Alignment' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Lift & Leveling Kits' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Lowering Kits' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Brakes & Suspension' } },
+    ],
+  },
 };
 
 const faqSchema = {

@@ -36,25 +36,16 @@ export default function LoweringSacramentoPage() {
     provider: {
       '@type': 'LocalBusiness',
       name: 'Tire Geeks',
-      address: [
-        {
-          '@type': 'PostalAddress',
-          streetAddress: '3020 Florin Road',
-          addressLocality: 'Sacramento',
-          addressRegion: 'CA',
-          postalCode: '95822',
-        },
-        {
-          '@type': 'PostalAddress',
-          streetAddress: '2245 Arden Way',
-          addressLocality: 'Sacramento',
-          addressRegion: 'CA',
-          postalCode: '95825',
-        },
-      ],
+      url: 'https://tiregeeks.com',
     },
-    areaServed: { '@type': 'City', name: 'Sacramento, CA' },
+    areaServed: { '@type': 'City', name: 'Sacramento' },
     serviceType: 'Vehicle Lowering & Suspension',
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'USD',
+      price: '400',
+      description: 'Lowering springs from $400',
+    },
   };
 
   const faqSchema = {
