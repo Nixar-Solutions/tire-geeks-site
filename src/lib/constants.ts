@@ -48,8 +48,8 @@ export const BRAND = {
       phoneRaw: '+19168008786',
       hours: 'Mon–Sat: 9AM–7PM',
       mapUrl: 'https://maps.google.com/?q=3020+Florin+Road+Sacramento+CA+95822',
-      lat: 38.4960,
-      lng: -121.4930,
+      lat: 38.4955604117297,
+      lng: -121.47168528748884,
     },
     {
       name: 'Arden Way',
@@ -58,8 +58,8 @@ export const BRAND = {
       phoneRaw: '+19169138786',
       hours: 'Mon–Sat: 9AM–7PM',
       mapUrl: 'https://maps.google.com/?q=2245+Arden+Way+Sacramento+CA+95825',
-      lat: 38.6010,
-      lng: -121.4090,
+      lat: 38.59663750191987,
+      lng: -121.41249393169178,
     },
   ],
 

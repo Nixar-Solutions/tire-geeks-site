@@ -88,7 +88,7 @@ const schemaFlorin = {
     "postalCode": "95822",
     "addressCountry": "US"
   },
-  "geo": { "@type": "GeoCoordinates", "latitude": 38.4966, "longitude": -121.4944 },
+  "geo": { "@type": "GeoCoordinates", "latitude": 38.4955604117297, "longitude": -121.47168528748884 },
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -100,8 +100,8 @@ const schemaFlorin = {
   "priceRange": "$$",
   "paymentAccepted": "Cash, Credit Card, Debit Card, Acima Leasing",
   "sameAs": [
-    "https://www.facebook.com/TireGeeksSac",
-    "https://www.instagram.com/tiregeekssac/"
+    "https://www.facebook.com/p/Tire-Geeks-61573900123725/",
+    "https://www.instagram.com/tire.geeks"
   ],
   "areaServed": [
     { "@type": "City", "name": "Sacramento" },
@@ -138,7 +138,7 @@ const schemaArden = {
     "postalCode": "95825",
     "addressCountry": "US"
   },
-  "geo": { "@type": "GeoCoordinates", "latitude": 38.5977, "longitude": -121.4202 },
+  "geo": { "@type": "GeoCoordinates", "latitude": 38.59663750191987, "longitude": -121.41249393169178 },
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -150,8 +150,8 @@ const schemaArden = {
   "priceRange": "$$",
   "paymentAccepted": "Cash, Credit Card, Debit Card, Acima Leasing",
   "sameAs": [
-    "https://www.facebook.com/TireGeeksSac",
-    "https://www.instagram.com/tiregeekssac/"
+    "https://www.facebook.com/p/Tire-Geeks-61573900123725/",
+    "https://www.instagram.com/tire.geeks"
   ],
   "areaServed": [
     { "@type": "Place", "name": "Arden-Arcade, Sacramento" },
@@ -183,8 +183,8 @@ const schemaOrg = {
     "url": "https://tiregeeks.com/images/logo.png"
   },
   "sameAs": [
-    "https://www.facebook.com/TireGeeksSac",
-    "https://www.instagram.com/tiregeekssac/"
+    "https://www.facebook.com/p/Tire-Geeks-61573900123725/",
+    "https://www.instagram.com/tire.geeks"
   ],
   "contactPoint": [
     {
