@@ -36,7 +36,7 @@ const serviceSchema = {
   name: 'Leveling Kit Installation Sacramento',
   description: 'Professional leveling kit installation for trucks and SUVs in Sacramento, CA. Strut spacers, coil spring spacers, and torsion bar key adjustments with post-level alignment included.',
   provider: { '@type': 'LocalBusiness', name: 'Tire Geeks', url: 'https://tiregeeks.com' },
-  areaServed: { '@type': 'City', name: 'Sacramento, CA' },
+  areaServed: { '@type': 'City', name: 'Sacramento' },
   serviceType: 'Leveling Kit Installation',
   offers: { '@type': 'Offer', priceCurrency: 'USD', price: '199', description: 'Leveling kit installation from $199' },
 };

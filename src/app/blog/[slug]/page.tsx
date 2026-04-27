@@ -30,6 +30,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "headline": post.title,
     "author": { "@type": "Organization", "name": "Tire Geeks" },
     "datePublished": post.date,
+    "dateModified": post.date,
     "image": "https://tiregeeks.com" + post.image,
     "publisher": {
       "@type": "Organization",

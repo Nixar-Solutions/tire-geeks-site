@@ -1,17 +1,3 @@
-/**
- * SCHEMA TODO — Replace TODO_REPLACE_WITH_ACTUAL_GBP_REVIEW_COUNT in
- * aggregateRating reviewCount fields with the actual count from each
- * Google Business Profile listing (Florin Road and Arden Way).
- *
- * Get current counts from:
- *   - https://business.google.com (Florin Road profile → Reviews tab)
- *   - https://business.google.com (Arden Way profile → Reviews tab)
- *
- * The placeholder string is intentionally non-numeric so Google ignores
- * the block until real values are populated. Fake review counts violate
- * Google's structured data guidelines and can result in manual penalty
- * action. Do not invent numbers.
- */
 import type { Metadata } from 'next';
 import { Bebas_Neue, Oswald, Inter, Barlow_Condensed } from 'next/font/google';
 import './globals.css';
@@ -91,7 +77,7 @@ const schemaFlorin = {
   "@context": "https://schema.org",
   "@type": "TireShop",
   "name": "Tire Geeks - Florin Road",
-  "image": "https://tiregeeks.com/images/og-image.jpg",
+  "image": "https://tiregeeks.com/images/store-front-florin.jpg",
   "url": "https://tiregeeks.com",
   "telephone": "(916) 800-8786",
   "address": {
@@ -112,13 +98,6 @@ const schemaFlorin = {
     }
   ],
   "priceRange": "$$",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "TODO_REPLACE_WITH_ACTUAL_GBP_REVIEW_COUNT",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
   "paymentAccepted": "Cash, Credit Card, Debit Card, Acima Leasing",
   "sameAs": [
     "https://www.facebook.com/p/Tire-Geeks-61573900123725/",
@@ -150,7 +129,7 @@ const schemaArden = {
   "@context": "https://schema.org",
   "@type": "TireShop",
   "name": "Tire Geeks - Arden Way",
-  "image": "https://tiregeeks.com/images/og-image.jpg",
+  "image": "https://tiregeeks.com/images/store-front-arden.jpg",
   "url": "https://tiregeeks.com",
   "telephone": "(916) 913-8786",
   "address": {
@@ -171,13 +150,6 @@ const schemaArden = {
     }
   ],
   "priceRange": "$$",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "TODO_REPLACE_WITH_ACTUAL_GBP_REVIEW_COUNT",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
   "paymentAccepted": "Cash, Credit Card, Debit Card, Acima Leasing",
   "sameAs": [
     "https://www.facebook.com/p/Tire-Geeks-61573900123725/",

@@ -36,33 +36,15 @@ export default function LiftKitsSacramentoPage() {
     provider: {
       '@type': 'LocalBusiness',
       name: 'Tire Geeks',
-      address: [
-        {
-          '@type': 'PostalAddress',
-          streetAddress: '3020 Florin Road',
-          addressLocality: 'Sacramento',
-          addressRegion: 'CA',
-          postalCode: '95822',
-        },
-        {
-          '@type': 'PostalAddress',
-          streetAddress: '2245 Arden Way',
-          addressLocality: 'Sacramento',
-          addressRegion: 'CA',
-          postalCode: '95825',
-        },
-      ],
+      url: 'https://tiregeeks.com',
     },
-    areaServed: { '@type': 'City', name: 'Sacramento, CA' },
+    areaServed: { '@type': 'City', name: 'Sacramento' },
     serviceType: 'Lift Kit Installation',
     offers: {
       '@type': 'Offer',
-      priceSpecification: {
-        '@type': 'PriceSpecification',
-        price: '299',
-        priceCurrency: 'USD',
-        description: 'Starting price for lift kit installation',
-      },
+      priceCurrency: 'USD',
+      price: '299',
+      description: 'Lift kit installation from $299',
     },
   };
 

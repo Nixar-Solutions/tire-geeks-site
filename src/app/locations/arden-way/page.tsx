@@ -39,11 +39,11 @@ const breadcrumbSchema = {
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'AutoRepair',
+  '@type': 'TireShop',
   name: 'Tire Geeks - Arden Way',
   image: 'https://tiregeeks.com/images/store-front-arden.jpg',
   url: 'https://tiregeeks.com/locations/arden-way',
-  telephone: '+19169138786',
+  telephone: '(916) 913-8786',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '2245 Arden Way',
@@ -54,8 +54,8 @@ const localBusinessSchema = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 38.601,
-    longitude: -121.409,
+    latitude: 38.59663750191987,
+    longitude: -121.41249393169178,
   },
   openingHoursSpecification: [
     {
@@ -66,11 +66,35 @@ const localBusinessSchema = {
     },
   ],
   priceRange: '$$',
+  paymentAccepted: 'Cash, Credit Card, Debit Card, Acima Leasing',
+  sameAs: [
+    'https://www.facebook.com/p/Tire-Geeks-61573900123725/',
+    'https://www.instagram.com/tire.geeks',
+  ],
   areaServed: [
-    { '@type': 'City', name: 'Sacramento' },
+    { '@type': 'Place', name: 'Arden-Arcade, Sacramento' },
     { '@type': 'City', name: 'Carmichael' },
     { '@type': 'City', name: 'Citrus Heights' },
+    { '@type': 'Place', name: 'Fair Oaks' },
+    { '@type': 'City', name: 'Rancho Cordova' },
+    { '@type': 'City', name: 'Roseville' },
+    { '@type': 'Place', name: 'North Highlands' },
+    { '@type': 'Place', name: 'Natomas, Sacramento' },
+    { '@type': 'Place', name: 'Midtown, Sacramento' },
+    { '@type': 'Place', name: 'East Sacramento' },
   ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Tire Geeks Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Tire Sales & Installation' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Custom Wheels & Fitment' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '4-Wheel Alignment' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Lift & Leveling Kits' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Lowering Kits' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Brakes & Suspension' } },
+    ],
+  },
 };
 
 const faqSchema = {

@@ -221,49 +221,79 @@ export default function ServicesPage() {
       "@type": "Service",
       "name": "Tires",
       "description": "Tire sales, professional mounting, computer balancing, flat repair, and TPMS sensor service.",
-      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks" },
-      "areaServed": { "@type": "City", "name": "Sacramento, CA" },
-      "serviceType": "Tire Sales & Installation"
+      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks", "url": "https://tiregeeks.com" },
+      "areaServed": { "@type": "City", "name": "Sacramento" },
+      "serviceType": "Tire Sales & Installation",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "79",
+        "description": "Tires from $79/set of 4"
+      }
     },
     {
       "@type": "Service",
       "name": "Custom Wheels",
       "description": "Aftermarket wheel sales, expert fitment consultation, wheel and tire combo packages, and hub-centric ring installation.",
-      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks" },
-      "areaServed": { "@type": "City", "name": "Sacramento, CA" },
+      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks", "url": "https://tiregeeks.com" },
+      "areaServed": { "@type": "City", "name": "Sacramento" },
       "serviceType": "Custom Wheel Sales & Fitment"
     },
     {
       "@type": "Service",
       "name": "Wheel Alignment",
       "description": "Full 4-wheel alignment service with camber, caster, and toe adjustment. Before and after printout included. Starting at $79.",
-      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks" },
-      "areaServed": { "@type": "City", "name": "Sacramento, CA" },
-      "serviceType": "4-Wheel Alignment"
+      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks", "url": "https://tiregeeks.com" },
+      "areaServed": { "@type": "City", "name": "Sacramento" },
+      "serviceType": "4-Wheel Alignment",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "79",
+        "description": "4-Wheel Alignment from $79"
+      }
     },
     {
       "@type": "Service",
       "name": "Lift & Leveling Kits",
       "description": "Body lifts, suspension lifts, and leveling kit installation for trucks, Jeeps, and SUVs. Post-lift alignment included. Starting at $299.",
-      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks" },
-      "areaServed": { "@type": "City", "name": "Sacramento, CA" },
-      "serviceType": "Lift & Leveling Kit Installation"
+      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks", "url": "https://tiregeeks.com" },
+      "areaServed": { "@type": "City", "name": "Sacramento" },
+      "serviceType": "Lift & Leveling Kit Installation",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "299",
+        "description": "Lift kit installation from $299"
+      }
     },
     {
       "@type": "Service",
       "name": "Lowering Kits",
       "description": "Coilover installation, lowering springs, and air suspension systems. Custom stance and fitment consulting with post-drop alignment included.",
-      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks" },
-      "areaServed": { "@type": "City", "name": "Sacramento, CA" },
-      "serviceType": "Lowering Kit Installation"
+      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks", "url": "https://tiregeeks.com" },
+      "areaServed": { "@type": "City", "name": "Sacramento" },
+      "serviceType": "Lowering Kit Installation",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "400",
+        "description": "Lowering springs from $400"
+      }
     },
     {
       "@type": "Service",
       "name": "Brakes & Suspension",
       "description": "Brake pad and rotor replacement, caliper service, strut and shock replacement, control arm and ball joint service, and performance upgrades.",
-      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks" },
-      "areaServed": { "@type": "City", "name": "Sacramento, CA" },
-      "serviceType": "Brake & Suspension Service"
+      "provider": { "@type": "LocalBusiness", "name": "Tire Geeks", "url": "https://tiregeeks.com" },
+      "areaServed": { "@type": "City", "name": "Sacramento" },
+      "serviceType": "Brake & Suspension Service",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "150",
+        "description": "Brake service from $150 per axle"
+      }
     }
   ];
 
