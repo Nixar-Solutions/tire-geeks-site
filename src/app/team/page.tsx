@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -12,14 +10,13 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://tiregeeks.com/team' },
 };
 
-function imageExists(relativePath: string): boolean {
-  try {
-    const filePath = path.join(process.cwd(), 'public', relativePath.replace(/^\//, ''));
-    return fs.existsSync(filePath);
-  } catch {
-    return false;
-  }
-}
+// Headshot files are not yet uploaded. Once /public/images/team/<slug>.jpg
+// exists for an author, set hasHeadshot[slug] = true to render the photo
+// instead of the initials placeholder.
+const hasHeadshot: Record<string, boolean> = {
+  'moni-tariq': false,
+  erika: false,
+};
 
 function getInitials(name: string): string {
   return name
@@ -107,7 +104,7 @@ export default function TeamPage() {
         <section style={{ background: '#0A0A0A', padding: '80px 0' }}>
           <div className="max-w-[1100px] mx-auto px-6 flex flex-col gap-20">
             {authors.map((author, idx) => {
-              const hasImage = imageExists(author.imagePath);
+              const hasImage = hasHeadshot[author.slug] === true;
               const isReversed = idx % 2 === 1;
               return (
                 <article
