@@ -4,6 +4,7 @@ export interface Author {
   fullName: string;
   title: string;
   yearsInIndustry: number;
+  credentialBadge?: string;
   expertise: string[];
   bio: string;
   shortBio: string;
@@ -18,36 +19,88 @@ export const authors: Author[] = [
     title: 'Owner, Tire Geeks',
     yearsInIndustry: 20,
     expertise: [
-      'Lift kits',
-      'Leveling kits',
-      'Lowering work',
+      'Tire and wheel retail operations',
+      'Multi-shop management',
       'Custom builds',
-      'Suspension',
-      'Alignment',
-      'Vehicle fitment',
+      'Suspension and lift work',
+      'Customer service standards',
+      'Fitment expertise',
     ],
-    bio: "Moni Tariq owns Tire Geeks and runs both shops in person — Florin Road in South Sacramento and Arden Way on the north end. Twenty years in the trade, most of it spent under the trucks the chain shops won't touch: 4-inch lifts on Tacomas, leveling kits on F-150s and Silverados, coilover installs on 10th-gen Civics, post-lift alignment on lifted 4Runners. Moni does the fitment math the chains skip — backspacing, brake clearance, control-arm angles, bump-stop measurements. No upsells, no database-lookup recommendations, no two-week appointment book. Walk in, talk through your build, drive out with it dialed. Don't trust a nerd for your needs — go with the geeks.",
+    bio: "Moni Tariq owns Tire Geeks and runs both Sacramento shops — Florin Road in South Sac, Arden Way on the north end. Twenty years in the tire and wheel trade, most of those years managing multiple shops before he founded Tire Geeks with his brother Qassam. He sets the standard for how the business runs: honest fitment, no chain-shop database lookups, no upsells, real Acima approval for working drivers. If a customer walks out unsatisfied, Moni hears about it. Most don't. Walk in either store any day Mon–Sat and the shop runs the way it does because Moni built it that way.",
     shortBio:
-      "Owner of Tire Geeks. Twenty years installing lifts, lowering kits, and coilovers and dialing in post-build alignment across Sacramento. The fitment math the chains skip — that's his work.",
+      "Owner of Tire Geeks. Twenty years in tires and wheels, with multiple shops managed before founding Tire Geeks alongside his brother Qassam. Standards-driven on fitment, financing, and customer treatment.",
     imagePath: '/images/team/moni-tariq.jpg',
+  },
+  {
+    slug: 'qassam-tariq',
+    name: 'Qassam Tariq',
+    fullName: 'Qassam Tariq',
+    title: 'Co-Owner, Tire Geeks',
+    yearsInIndustry: 20,
+    expertise: [
+      'Multi-location shop operations',
+      'Business development',
+      'Market expansion',
+      'Custom builds',
+      'Retail strategy',
+    ],
+    bio: "Qassam Tariq is co-owner of Tire Geeks and Moni's brother. Twenty years in the tire and wheel trade, with most of those years spent helping run and open shops across multiple markets — California to El Paso, Texas. He's the operations and growth side of the business. While Moni runs the day-to-day at the Sacramento stores, Qassam is the one figuring out where to expand next, what new lines to bring in, and how to keep the customer experience the same as the brand grows. The Tariq brothers built Tire Geeks together and run it with the same standards the chain shops gave up on a long time ago.",
+    shortBio:
+      "Co-owner of Tire Geeks and Moni's brother. Twenty years opening and running tire and wheel shops from California to El Paso. Operations and growth side of the business.",
+    imagePath: '/images/team/qassam-tariq.jpg',
+  },
+  {
+    slug: 'azam-mirza',
+    name: 'Azam Mirza',
+    fullName: 'Azam Mirza',
+    title: 'Co-Owner, Tire Geeks',
+    yearsInIndustry: 0,
+    credentialBadge: 'Founder of Akorbi (exited)',
+    expertise: [
+      'Business strategy',
+      'Technology operations',
+      'Scaling operations',
+      'Customer experience design',
+    ],
+    bio: "Azam Mirza is the founder of Akorbi — a technology company he built, scaled, and successfully exited — and is now a co-owner of Tire Geeks. He's new to the tire industry on paper, but he isn't new to running operations. The same systems thinking that took Akorbi from an idea to an exit is what he's bringing to the way Tire Geeks handles inventory, customer experience, financing flow, and shop-to-shop consistency as the business grows. The reason a Tire Geeks customer can walk into Florin Road or Arden Way and get the same answer to the same question — that's the kind of thing Azam pays attention to.",
+    shortBio:
+      'Co-owner of Tire Geeks. Founder of Akorbi — a technology company he built, scaled, and successfully exited. Brings enterprise-grade operations and customer experience thinking to the shop floor.',
+    imagePath: '/images/team/azam-mirza.jpg',
   },
   {
     slug: 'erika',
     name: 'Erika',
     fullName: 'Erika from Tire Geeks',
-    title: 'Tire & Wheel Specialist',
+    title: 'Store Manager',
     yearsInIndustry: 10,
     expertise: [
       'Tire selection',
       'Wheel fitment',
-      'Customer financing',
-      'Acima approvals',
-      'Walk-in service',
+      'Customer financing (Acima)',
+      'Store operations',
+      'Customer service',
     ],
-    bio: "Erika has been in the tire industry for 10 years and runs the counter at Tire Geeks. Her job: get you into the right tire and the right wheel for what you actually drive and what you actually need to spend. She'll walk you through the fitment math on a custom wheel package — offset, bolt pattern, brake clearance — without making you feel like a beginner for asking. She'll also walk you through Acima approval in five minutes flat: soft pull only, $5,000 cap, 100 days no interest. No credit shame, no upsell, no judgment. If you walk in unsure, you walk out rolling. Ride now. Pay later.",
+    bio: "Erika is a Store Manager at Tire Geeks and the person most customers meet first. Ten years in the tire industry, and she runs the day-to-day at her store: walk-ins, scheduling, parts, and the customer experience from the moment you step in to the moment you drive off. She'll walk you through tire selection by vehicle and budget, run the fitment math on a custom wheel package without making you feel like a beginner, and get you through Acima approval in five minutes flat — soft pull only, $5,000 cap, 100 days no interest. No credit shame, no upsell, no judgment. If you walk in unsure, you walk out rolling. Ride now. Pay later.",
     shortBio:
-      'Tire and wheel specialist at Tire Geeks. Ten years walking customers through tire selection, custom wheel fitment, and Acima approval. No credit shame, no upsell, no judgment.',
+      'Store Manager at Tire Geeks. Ten years in tires, running the day-to-day: walk-ins, ordering, customer experience. Walks customers through tire selection, fitment math, and Acima approval — no credit shame, no upsell.',
     imagePath: '/images/team/erika.jpg',
+  },
+  {
+    slug: 'victor',
+    name: 'Victor',
+    fullName: 'Victor',
+    title: 'Store Manager',
+    yearsInIndustry: 0,
+    expertise: [
+      'Store operations',
+      'Customer service',
+      'Daily shop management',
+      'Tire and wheel sales',
+    ],
+    bio: "Victor manages a Tire Geeks store day in and day out. He's the one running the floor when you walk in: greeting customers, sizing up what they actually need, getting jobs onto the schedule, and making sure nobody waits longer than they should. Tires, custom wheels, financing, fitment questions — Victor's been doing this work long enough to recognize the right answer fast and to flag the wrong one before a customer drives off. He'll talk you through your options without pressure and without the chain-shop runaround. The shop runs because of people like Victor at the counter every Mon–Sat. Walk in and find him.",
+    shortBio:
+      'Store Manager at Tire Geeks. Runs the floor at his store every day — customer service, scheduling, tires, custom wheels, fitment, financing. The reason walk-ins move fast and leave happy.',
+    imagePath: '/images/team/victor.jpg',
   },
 ];
 

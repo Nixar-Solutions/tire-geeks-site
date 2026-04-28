@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import { authors } from '@/data/authors';
+import { authors, type Author } from '@/data/authors';
 
 export const metadata: Metadata = {
   title: 'Meet the Tire Geeks Team | Sacramento Tire & Wheel Shop',
   description:
-    'Meet the team behind Tire Geeks. Moni Tariq, owner with 20 years of lift, lowering, and alignment experience. Erika, tire and wheel specialist with 10 years walking Sacramento drivers through fitment and Acima financing.',
+    'Meet the Tire Geeks team. Co-owners Moni Tariq, Qassam Tariq, and Azam Mirza, plus Store Managers Erika and Victor — running two Sacramento shops on Florin Road and Arden Way.',
   alternates: { canonical: 'https://tiregeeks.com/team' },
 };
 
@@ -15,8 +15,15 @@ export const metadata: Metadata = {
 // instead of the initials placeholder.
 const hasHeadshot: Record<string, boolean> = {
   'moni-tariq': false,
+  'qassam-tariq': false,
+  'azam-mirza': false,
   erika: false,
+  victor: false,
 };
+
+const ownerSlugs = ['moni-tariq', 'qassam-tariq', 'azam-mirza'];
+const owners = authors.filter((a) => ownerSlugs.includes(a.slug));
+const managers = authors.filter((a) => !ownerSlugs.includes(a.slug));
 
 function getInitials(name: string): string {
   return name
@@ -26,6 +33,120 @@ function getInitials(name: string): string {
     .join('')
     .slice(0, 2)
     .toUpperCase();
+}
+
+function AuthorSection({ author, reversed }: { author: Author; reversed: boolean }) {
+  const hasImage = hasHeadshot[author.slug] === true;
+  const yearsBadge =
+    author.yearsInIndustry > 0
+      ? `${author.yearsInIndustry} Years in the Industry`
+      : author.credentialBadge;
+
+  return (
+    <article
+      id={author.slug}
+      className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start scroll-mt-28"
+    >
+      {/* Image / fallback */}
+      <div className={`lg:col-span-2 ${reversed ? 'lg:order-last' : ''}`}>
+        {hasImage ? (
+          <img
+            src={author.imagePath}
+            alt={`${author.fullName}, ${author.title}`}
+            className="w-full aspect-[4/5] rounded-2xl object-cover"
+            style={{ border: '1px solid rgba(255,255,255,0.06)' }}
+            loading="lazy"
+          />
+        ) : (
+          <div
+            className="w-full aspect-[4/5] rounded-2xl flex items-center justify-center"
+            style={{
+              background: 'linear-gradient(135deg, #1A1A1A 0%, #111111 100%)',
+              border: '1px solid rgba(255,255,255,0.06)',
+            }}
+            aria-label={`${author.fullName} photo placeholder`}
+          >
+            <span
+              className="font-display uppercase"
+              style={{
+                fontSize: 'clamp(64px, 10vw, 120px)',
+                color: '#D42B2B',
+                letterSpacing: '0.05em',
+              }}
+            >
+              {getInitials(author.name)}
+            </span>
+          </div>
+        )}
+      </div>
+
+      {/* Bio block */}
+      <div className="lg:col-span-3">
+        <div className="flex items-center gap-3 mb-3">
+          <span className="block w-10 h-[3px] rounded-full bg-[#D42B2B]" />
+          <span className="font-nav text-[12px] tracking-[0.2em] text-[#D42B2B] uppercase">
+            {author.title}
+          </span>
+        </div>
+        <h2 className="font-display text-[clamp(32px,4.5vw,48px)] leading-[1.1] text-white uppercase mb-3">
+          {author.name}
+        </h2>
+        {yearsBadge && (
+          <div
+            className="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full"
+            style={{
+              background: 'rgba(30,136,199,0.1)',
+              border: '1px solid rgba(30,136,199,0.3)',
+            }}
+          >
+            <span className="font-nav text-[12px] tracking-[0.12em] text-[#1E88C7] uppercase font-semibold">
+              {yearsBadge}
+            </span>
+          </div>
+        )}
+        <p className="font-body text-[16px] md:text-[18px] leading-[1.8] text-[#D4D4D4] mb-6">
+          {author.bio}
+        </p>
+        <div>
+          <p className="font-nav text-[12px] tracking-[0.2em] text-[#9E9E9E] uppercase mb-3">
+            Areas of Expertise
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {author.expertise.map((tag) => (
+              <span
+                key={tag}
+                className="font-nav text-[13px] px-3 py-1.5 rounded-full"
+                style={{
+                  background: '#1A1A1A',
+                  border: '1px solid rgba(212,43,43,0.25)',
+                  color: '#F2F2F2',
+                }}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function SectionHeader({ kicker, headline }: { kicker: string; headline: string }) {
+  return (
+    <div className="text-center mb-14">
+      <div className="flex items-center justify-center gap-3 mb-4">
+        <span className="block w-10 h-[3px] rounded-full bg-[#D42B2B]" />
+        <span className="font-nav text-[13px] tracking-[0.2em] text-[#D42B2B] uppercase">
+          {kicker}
+        </span>
+        <span className="block w-10 h-[3px] rounded-full bg-[#D42B2B]" />
+      </div>
+      <h2 className="font-display text-[clamp(28px,4vw,48px)] text-white uppercase leading-[1.15]">
+        {headline}
+      </h2>
+    </div>
+  );
 }
 
 export default function TeamPage() {
@@ -92,112 +213,50 @@ export default function TeamPage() {
               Meet the People Behind Tire Geeks
             </h1>
             <p className="font-body text-[16px] md:text-[18px] leading-[1.7] text-[#9E9E9E] mt-6">
-              Two real people, two Sacramento shops, thirty combined years in the trade.
-              Moni runs the wrenches across Florin Road and Arden Way. Erika runs the counter
-              and walks customers through tire selection, fitment math, and Acima financing.
-              No call centers, no scripts, no database lookups.
+              The team behind Tire Geeks: three owners, two store managers, two Sacramento shops.
+              The Tariq brothers built it, Azam Mirza co-owns it, and Erika and Victor run the
+              day-to-day. No call centers, no scripts, no database-lookup recommendations — real
+              people who know the work.
             </p>
           </div>
         </section>
 
-        {/* Author sections */}
+        {/* Ownership */}
         <section style={{ background: '#0A0A0A', padding: '80px 0' }}>
-          <div className="max-w-[1100px] mx-auto px-6 flex flex-col gap-20">
-            {authors.map((author, idx) => {
-              const hasImage = hasHeadshot[author.slug] === true;
-              const isReversed = idx % 2 === 1;
-              return (
-                <article
+          <div className="max-w-[1100px] mx-auto px-6">
+            <SectionHeader kicker="Ownership" headline="The Owners" />
+            <div className="flex flex-col gap-20">
+              {owners.map((author, idx) => (
+                <AuthorSection
                   key={author.slug}
-                  id={author.slug}
-                  className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start scroll-mt-28"
-                >
-                  {/* Image / fallback */}
-                  <div className={`lg:col-span-2 ${isReversed ? 'lg:order-last' : ''}`}>
-                    {hasImage ? (
-                      <img
-                        src={author.imagePath}
-                        alt={`${author.fullName}, ${author.title}`}
-                        className="w-full aspect-[4/5] rounded-2xl object-cover"
-                        style={{ border: '1px solid rgba(255,255,255,0.06)' }}
-                        loading="lazy"
-                      />
-                    ) : (
-                      <div
-                        className="w-full aspect-[4/5] rounded-2xl flex items-center justify-center"
-                        style={{
-                          background:
-                            'linear-gradient(135deg, #1A1A1A 0%, #111111 100%)',
-                          border: '1px solid rgba(255,255,255,0.06)',
-                        }}
-                        aria-label={`${author.fullName} photo placeholder`}
-                      >
-                        <span
-                          className="font-display uppercase"
-                          style={{
-                            fontSize: 'clamp(64px, 10vw, 120px)',
-                            color: '#D42B2B',
-                            letterSpacing: '0.05em',
-                          }}
-                        >
-                          {getInitials(author.name)}
-                        </span>
-                      </div>
-                    )}
-                  </div>
+                  author={author}
+                  reversed={idx % 2 === 1}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
 
-                  {/* Bio block */}
-                  <div className="lg:col-span-3">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="block w-10 h-[3px] rounded-full bg-[#D42B2B]" />
-                      <span className="font-nav text-[12px] tracking-[0.2em] text-[#D42B2B] uppercase">
-                        {author.title}
-                      </span>
-                    </div>
-                    <h2 className="font-display text-[clamp(32px,4.5vw,48px)] leading-[1.1] text-white uppercase mb-3">
-                      {author.name}
-                    </h2>
-                    <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full"
-                      style={{ background: 'rgba(30,136,199,0.1)', border: '1px solid rgba(30,136,199,0.3)' }}
-                    >
-                      <span className="font-nav text-[12px] tracking-[0.12em] text-[#1E88C7] uppercase font-semibold">
-                        {author.yearsInIndustry} Years in the Industry
-                      </span>
-                    </div>
-                    <p className="font-body text-[16px] md:text-[18px] leading-[1.8] text-[#D4D4D4] mb-6">
-                      {author.bio}
-                    </p>
-                    <div>
-                      <p className="font-nav text-[12px] tracking-[0.2em] text-[#9E9E9E] uppercase mb-3">
-                        Areas of Expertise
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {author.expertise.map((tag) => (
-                          <span
-                            key={tag}
-                            className="font-nav text-[13px] px-3 py-1.5 rounded-full"
-                            style={{
-                              background: '#1A1A1A',
-                              border: '1px solid rgba(212,43,43,0.25)',
-                              color: '#F2F2F2',
-                            }}
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              );
-            })}
+        {/* Store Management */}
+        <section style={{ background: '#111111', padding: '80px 0' }}>
+          <div className="max-w-[1100px] mx-auto px-6">
+            <SectionHeader kicker="Store Management" headline="Running the Floor" />
+            <div className="flex flex-col gap-20">
+              {managers.map((author, idx) => (
+                <AuthorSection
+                  key={author.slug}
+                  author={author}
+                  reversed={idx % 2 === 1}
+                />
+              ))}
+            </div>
           </div>
         </section>
 
         {/* CTA */}
         <section
           className="flex flex-col items-center text-center py-20 px-6"
-          style={{ background: '#111111' }}
+          style={{ background: '#0A0A0A' }}
         >
           <div className="mx-auto mb-6" style={{ width: 48, height: 3, background: '#D42B2B' }} />
           <h2
