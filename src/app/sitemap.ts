@@ -19,6 +19,7 @@ export default function sitemap() {
     { url: `${base}/gallery`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 },
     { url: `${base}/blog`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 },
     { url: `${base}/about`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
+    { url: `${base}/team`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
     { url: `${base}/locations`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${base}/locations/florin-road`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
     { url: `${base}/locations/arden-way`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },

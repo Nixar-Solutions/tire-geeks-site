@@ -5,6 +5,7 @@ export interface BlogPost {
   excerpt: string;
   category: string;
   author: string;
+  authorSlug: string;
   date: string;
   readTime: string;
   content: string;
@@ -19,7 +20,8 @@ export const blogPosts: BlogPost[] = [
     title: 'Wheel Offset Explained: Positive, Negative & Zero Offset Guide',
     excerpt: 'Understanding wheel offset is critical for proper fitment. Learn the difference between positive, negative, and zero offset, how it affects your vehicle, and why getting it right matters.',
     category: 'FITMENT',
-    author: 'Tire Geeks Team',
+    author: 'Moni Tariq',
+    authorSlug: 'moni-tariq',
     date: '2025-01-15',
     readTime: '10 min read',
     content: `
@@ -106,7 +108,8 @@ export const blogPosts: BlogPost[] = [
     title: 'How to Read Tire Size: A Complete Guide to Tire Sidewall Numbers',
     excerpt: 'That string of numbers and letters on your tire sidewall contains everything you need to know about size, load capacity, and speed rating. Here is how to decode it.',
     category: 'TIRES',
-    author: 'Tire Geeks Team',
+    author: 'Erika',
+    authorSlug: 'erika',
     date: '2025-02-10',
     readTime: '9 min read',
     content: `
@@ -212,7 +215,8 @@ export const blogPosts: BlogPost[] = [
     title: 'Complete Tire Fitment Guide for Lifted Trucks: 2 Inch to 6 Inch Lifts',
     excerpt: 'Wondering what size tires you can fit after lifting your truck? This comprehensive guide covers tire sizes for every common lift height, plus vehicle-specific recommendations.',
     category: 'LIFTS & LOWERING',
-    author: 'Tire Geeks Team',
+    author: 'Moni Tariq',
+    authorSlug: 'moni-tariq',
     date: '2025-03-05',
     readTime: '11 min read',
     content: `
@@ -310,7 +314,8 @@ export const blogPosts: BlogPost[] = [
     title: "All-Season vs All-Terrain vs Mud-Terrain Tires: A Sacramento Driver's Guide",
     excerpt: 'Sacramento drivers face everything from scorching summer pavement to Sierra snow trips. Learn which tire category is right for your driving habits and vehicle.',
     category: 'TIRES',
-    author: 'Tire Geeks Team',
+    author: 'Erika',
+    authorSlug: 'erika',
     date: '2025-04-18',
     readTime: '10 min read',
     content: `
@@ -424,7 +429,8 @@ export const blogPosts: BlogPost[] = [
     title: 'Sacramento Tire Buying Guide: Everything Local Drivers Need to Know',
     excerpt: 'From scorching summer pavement to Sierra road trips, Sacramento demands a lot from your tires. Here is your complete local guide to buying tires the smart way.',
     category: 'SACRAMENTO',
-    author: 'Tire Geeks Team',
+    author: 'Erika',
+    authorSlug: 'erika',
     date: '2025-05-12',
     readTime: '9 min read',
     content: `
@@ -536,7 +542,8 @@ export const blogPosts: BlogPost[] = [
     title: 'Wheel Bolt Pattern Guide: How to Find Your Bolt Pattern',
     excerpt: 'Your bolt pattern determines which wheels fit your vehicle. Learn what PCD means, how to measure it, and find common bolt patterns for every major make.',
     category: 'FITMENT',
-    author: 'Tire Geeks Team',
+    author: 'Moni Tariq',
+    authorSlug: 'moni-tariq',
     date: '2025-06-20',
     readTime: '9 min read',
     content: `
@@ -670,7 +677,8 @@ export const blogPosts: BlogPost[] = [
     title: "Why Tire Geeks Is Sacramento's Best Tire Shop: What Sets Us Apart",
     excerpt: 'Discover why Sacramento drivers choose Tire Geeks over chain stores for tires, wheels, and service. Two locations, walk-in friendly, expert fitment advice, and financing options that actually work.',
     category: 'SACRAMENTO',
-    author: 'Tire Geeks Team',
+    author: 'Erika',
+    authorSlug: 'erika',
     date: '2025-07-10',
     readTime: '14 min read',
     content: `
@@ -772,7 +780,8 @@ export const blogPosts: BlogPost[] = [
     title: 'Custom Wheels in Sacramento: Your Complete Guide to Upgrading',
     excerpt: 'Everything Sacramento drivers need to know about buying custom wheels. Brands, fitment, sizing, finishes, and how to get the right setup for your truck, car, or SUV at Tire Geeks.',
     category: 'WHEELS',
-    author: 'Tire Geeks Team',
+    author: 'Erika',
+    authorSlug: 'erika',
     date: '2025-08-05',
     readTime: '15 min read',
     content: `
@@ -878,7 +887,8 @@ export const blogPosts: BlogPost[] = [
     title: 'Wheel Alignment in Sacramento: Signs You Need One and Where to Go',
     excerpt: 'Learn the signs of a bad wheel alignment, how alignments work, and why Sacramento road conditions make regular alignment checks essential. Walk-in service at Tire Geeks.',
     category: 'ALIGNMENT',
-    author: 'Tire Geeks Team',
+    author: 'Moni Tariq',
+    authorSlug: 'moni-tariq',
     date: '2025-09-12',
     readTime: '13 min read',
     content: `
@@ -994,7 +1004,8 @@ export const blogPosts: BlogPost[] = [
     title: 'Lift Kit Installation in Sacramento: Costs, Options & Expert Guide',
     excerpt: 'Everything you need to know about lift kit installation in Sacramento. Types, brands, costs, California lift laws, and why professional installation at Tire Geeks is the smart choice.',
     category: 'LIFTS & LOWERING',
-    author: 'Tire Geeks Team',
+    author: 'Moni Tariq',
+    authorSlug: 'moni-tariq',
     date: '2025-10-18',
     readTime: '16 min read',
     content: `
@@ -1121,7 +1132,8 @@ export const blogPosts: BlogPost[] = [
     title: 'Tire Financing with No Credit Check in Sacramento: How Acima Works at Tire Geeks',
     excerpt: 'Need tires, wheels, or a lift kit but worried about credit? Learn how Acima lease-to-own financing at Tire Geeks lets Sacramento drivers get what they need today with no traditional credit check.',
     category: 'FINANCING',
-    author: 'Tire Geeks Team',
+    author: 'Erika',
+    authorSlug: 'erika',
     date: '2025-11-08',
     readTime: '12 min read',
     content: `
@@ -1240,7 +1252,8 @@ export const blogPosts: BlogPost[] = [
     title: 'How Often Should You Rotate Your Tires? The Complete Guide',
     excerpt: 'Learn how often to rotate your tires, the different rotation patterns for every drivetrain, and why Sacramento heat and driving conditions make regular rotations essential for tire longevity.',
     category: 'MAINTENANCE',
-    author: 'Tire Geeks Team',
+    author: 'Erika',
+    authorSlug: 'erika',
     date: '2025-12-14',
     readTime: '13 min read',
     content: `
@@ -1355,7 +1368,8 @@ export const blogPosts: BlogPost[] = [
     title: 'Best Tires for Sacramento Weather: Hot Summers, Wet Winters & Sierra Trips',
     excerpt: 'Find the best tires for Sacramento drivers who deal with 100°F+ summers, rainy winters, and weekend trips to Tahoe. Expert recommendations from our local tire shop.',
     category: 'TIRES',
-    author: 'Tire Geeks Team',
+    author: 'Erika',
+    authorSlug: 'erika',
     date: '2026-01-05',
     readTime: '13 min read',
     content: `
@@ -1453,7 +1467,8 @@ export const blogPosts: BlogPost[] = [
     title: 'The Ultimate Truck Tire Guide: What Sacramento Truck Owners Need to Know',
     excerpt: 'Complete guide to truck tires for Sacramento owners covering AT vs MT vs highway tires, popular sizes from 33s to 37s, load ratings, and towing considerations for F-150, Silverado, RAM, and Tacoma.',
     category: 'TIRES',
-    author: 'Tire Geeks Team',
+    author: 'Erika',
+    authorSlug: 'erika',
     date: '2026-01-20',
     readTime: '14 min read',
     content: `
@@ -1578,7 +1593,8 @@ export const blogPosts: BlogPost[] = [
     title: 'Lowering Your Car: Springs vs Coilovers vs Air Ride — The Complete Guide',
     excerpt: 'Compare lowering springs, coilovers, and air ride suspension systems with detailed pros, cons, and costs. California slam law explained plus popular platforms covered.',
     category: 'LIFTS & LOWERING',
-    author: 'Tire Geeks Team',
+    author: 'Moni Tariq',
+    authorSlug: 'moni-tariq',
     date: '2026-02-05',
     readTime: '15 min read',
     content: `
@@ -1719,7 +1735,8 @@ export const blogPosts: BlogPost[] = [
     title: 'Brake Replacement Cost in Sacramento: What to Expect in 2026',
     excerpt: 'Find out what brake replacement costs in Sacramento for sedans, trucks, and SUVs in 2026. Includes pricing breakdowns, warning signs, and why choosing the right shop matters.',
     category: 'BRAKES',
-    author: 'Tire Geeks Team',
+    author: 'Moni Tariq',
+    authorSlug: 'moni-tariq',
     date: '2026-02-20',
     readTime: '12 min read',
     content: `
@@ -1842,7 +1859,8 @@ export const blogPosts: BlogPost[] = [
     title: 'Tire Pressure Guide: How to Check, When to Adjust & TPMS Explained',
     excerpt: 'Complete tire pressure guide covering how to check PSI, the effects of Sacramento heat on pressure, TPMS systems explained, nitrogen vs air, and common pressure mistakes to avoid.',
     category: 'MAINTENANCE',
-    author: 'Tire Geeks Team',
+    author: 'Erika',
+    authorSlug: 'erika',
     date: '2026-03-05',
     readTime: '11 min read',
     content: `
@@ -1964,7 +1982,8 @@ export const blogPosts: BlogPost[] = [
     title: 'Wheels and Tires Package Deals: How to Save Money on Your Next Setup',
     excerpt: 'Learn how wheels and tires package deals save you $200-$500 compared to buying separately. Covers what is included, how to choose the right combo, and financing options in Sacramento.',
     category: 'WHEELS',
-    author: 'Tire Geeks Team',
+    author: 'Erika',
+    authorSlug: 'erika',
     date: '2026-03-20',
     readTime: '12 min read',
     content: `

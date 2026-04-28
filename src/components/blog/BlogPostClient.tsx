@@ -7,9 +7,11 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import type { BlogPost } from '@/data/blogPosts';
 import { getRelatedPosts } from '@/data/blogPosts';
+import { getAuthor } from '@/data/authors';
 
 export default function BlogPostClient({ post }: { post: BlogPost | undefined }) {
   const relatedPosts = post ? getRelatedPosts(post, 3) : [];
+  const author = post ? getAuthor(post.authorSlug) : undefined;
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -48,7 +50,16 @@ export default function BlogPostClient({ post }: { post: BlogPost | undefined })
         <div className="max-w-4xl mx-auto">
           <span className="inline-block bg-[#D42B2B]/10 text-[#D42B2B] text-xs font-nav px-3 py-1 rounded-full uppercase tracking-wider mb-6">{post.category}</span>
           <h1 className="font-display uppercase text-white" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', lineHeight: 1.1 }}>{post.title}</h1>
-          <p className="font-body mt-5" style={{ fontSize: 14, color: '#6B7280' }}>{post.date} &middot; {post.readTime} &middot; {post.author}</p>
+          <p className="font-body mt-5" style={{ fontSize: 14, color: '#6B7280' }}>{post.date} &middot; {post.readTime}</p>
+          {author && (
+            <p className="font-body mt-2" style={{ fontSize: 14, color: '#9E9E9E' }}>
+              By{' '}
+              <Link href={`/team#${author.slug}`} className="text-white hover:text-[#D42B2B] transition-colors">
+                {author.name}
+              </Link>
+              <span className="text-[#6B7280]"> &middot; {author.title} &middot; {author.yearsInIndustry} years in the industry</span>
+            </p>
+          )}
         </div>
       </section>
 

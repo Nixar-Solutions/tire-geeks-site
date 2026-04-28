@@ -1,4 +1,5 @@
 import { blogPosts, getPostBySlug } from '@/data/blogPosts';
+import { getAuthor } from '@/data/authors';
 import BlogPostClient from '@/components/blog/BlogPostClient';
 
 export async function generateStaticParams() {
@@ -23,12 +24,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
+  const author = post ? getAuthor(post.authorSlug) : undefined;
 
   const blogPostingSchema = post ? {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": post.title,
-    "author": { "@type": "Organization", "name": "Tire Geeks" },
+    "author": author ? {
+      "@type": "Person",
+      "name": author.fullName,
+      "jobTitle": author.title,
+      "url": `https://tiregeeks.com/team#${author.slug}`,
+      "knowsAbout": author.expertise,
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Tire Geeks",
+        "url": "https://tiregeeks.com"
+      }
+    } : { "@type": "Organization", "name": "Tire Geeks" },
     "datePublished": post.date,
     "dateModified": post.date,
     "image": "https://tiregeeks.com" + post.image,

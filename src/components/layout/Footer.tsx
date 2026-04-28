@@ -12,6 +12,7 @@ const QUICK_LINKS = [
   { label: 'Financing', href: '/financing' },
   { label: 'Blog', href: '/blog' },
   { label: 'About', href: '/about' },
+  { label: 'Team', href: '/team' },
   { label: 'Contact', href: '/contact' },
 ];
 
