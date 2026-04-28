@@ -23,6 +23,9 @@ export default function sitemap() {
     { url: `${base}/locations/florin-road`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
     { url: `${base}/locations/arden-way`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
     { url: `${base}/neighborhoods/land-park`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${base}/neighborhoods/elk-grove`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${base}/neighborhoods/arden-arcade`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${base}/neighborhoods/carmichael`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${base}/contact`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
     ...blogPosts.map(post => ({
       url: `${base}/blog/${post.slug}`,
