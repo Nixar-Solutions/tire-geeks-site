@@ -3,7 +3,6 @@ import { Bebas_Neue, Oswald, Inter, Barlow_Condensed } from 'next/font/google';
 import './globals.css';
 import SmoothScroll from '@/components/animations/SmoothScroll';
 import PageTransition from '@/components/animations/PageTransition';
-import StickyCtaBar from '@/components/ui/StickyCtaBar';
 
 const bebasNeue = Bebas_Neue({
   weight: '400',
@@ -234,7 +233,6 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        <StickyCtaBar />
         <SmoothScroll>
           <PageTransition>{children}</PageTransition>
         </SmoothScroll>
