@@ -5,11 +5,11 @@ import { Phone, MapPin, Clock, Check, ChevronRight, Navigation } from 'lucide-re
 export const metadata: Metadata = {
   title: 'Tire Shop Land Park Sacramento | Lifts, Wheels & Tires | Tire Geeks',
   description:
-    'Lift kits, lowering, custom wheels & tires for Land Park drivers. Tire Geeks on Florin Road, 5 min from Land Park. Walk in Mon-Sat 9AM-7PM. Call (916) 800-8786.',
+    'Lift kits, lowering, custom wheels & tires from $279 for Land Park drivers. Tire Geeks on Florin Road, 5 min from Land Park. Walk in Mon-Sat 9AM-7PM. Call (916) 800-8786.',
   openGraph: {
     title: 'Tire Shop Land Park Sacramento | Lifts, Wheels & Tires | Tire Geeks',
     description:
-      'Lift kits ($299+), lowering ($400+), custom wheels & tires ($79+) for Land Park, Sacramento. Walk in Mon-Sat 9AM-7PM. Call (916) 800-8786.',
+      'Lift kits, lowering, custom wheel packages, and tires from $279 for Land Park, Sacramento. Walk in Mon-Sat 9AM-7PM. Call (916) 800-8786.',
     url: 'https://tiregeeks.com/neighborhoods/land-park',
     images: [{ url: '/images/store-front-florin.jpg', width: 1200, height: 630 }],
   },
@@ -34,41 +34,38 @@ export default function LandParkPage() {
         '@type': 'Service',
         name: 'Lift Kit Installation in Land Park, Sacramento',
         description:
-          'Leveling kits, body lifts, and 3-6 inch suspension lifts for trucks, Jeeps, and SUVs from Land Park, Sacramento. Post-lift four-wheel alignment included.',
+          'Leveling kits, body lifts, and 3-6 inch suspension lifts for trucks, Jeeps, and SUVs from Land Park, Sacramento. Rough Country, ReadyLIFT, BDS, Bilstein, Teraflex. Post-lift four-wheel alignment included. Pricing varies by vehicle and kit.',
         provider: { '@type': 'LocalBusiness', name: 'Tire Geeks', url: 'https://tiregeeks.com' },
         areaServed: { '@type': 'Place', name: 'Land Park, Sacramento' },
         serviceType: 'Lift Kit Installation',
-        offers: { '@type': 'Offer', priceCurrency: 'USD', price: '299', description: 'Lift kit installation from $299' },
       },
       {
         '@type': 'Service',
         name: 'Car Lowering & Coilover Installation in Land Park, Sacramento',
         description:
-          'Lowering springs, coilovers, and air ride installation for cars and trucks from Land Park. CVC 24008 compliant. Post-install four-wheel alignment included.',
+          'Lowering springs, coilovers, and air ride installation for cars and trucks from Land Park. BC Racing, KW, Tein, Eibach, H&R, Air Lift Performance. CVC 24008 compliant. Post-install four-wheel alignment included. Pricing varies by vehicle and setup.',
         provider: { '@type': 'LocalBusiness', name: 'Tire Geeks', url: 'https://tiregeeks.com' },
         areaServed: { '@type': 'Place', name: 'Land Park, Sacramento' },
         serviceType: 'Lowering Kit Installation',
-        offers: { '@type': 'Offer', priceCurrency: 'USD', price: '400', description: 'Lowering installation from $400' },
       },
       {
         '@type': 'Service',
         name: 'Custom Wheels & Fitment in Land Park, Sacramento',
         description:
-          'Aftermarket wheels with verified fitment for Land Park drivers. Backspacing, offset, and caliper clearance measured in person before install.',
+          'Aftermarket wheels with verified fitment for Land Park drivers. Fuel, Method, KMC, Moto Metal, XD, American Force, Black Rhino in stock. Backspacing, offset, and caliper clearance measured in person before install. Pricing varies by brand and size.',
         provider: { '@type': 'LocalBusiness', name: 'Tire Geeks', url: 'https://tiregeeks.com' },
         areaServed: { '@type': 'Place', name: 'Land Park, Sacramento' },
         serviceType: 'Custom Wheels',
-        offers: { '@type': 'Offer', priceCurrency: 'USD', price: '150', description: 'Custom wheels from $150 each, packages from $599' },
       },
       {
         '@type': 'Service',
         name: 'Tires & Installation in Land Park, Sacramento',
         description:
-          'New tire sales and installation for Land Park drivers. Mounting, balancing, valve stems, TPMS reset, and out-the-door pricing. All major brands in stock.',
+          'New tire sales and installation for Land Park drivers. Mounting, balancing, valve stems, TPMS reset, and out-the-door pricing. All major brands in stock — Nitto, Toyo, BFGoodrich, Falken, Cooper, Hankook, Michelin.',
         provider: { '@type': 'LocalBusiness', name: 'Tire Geeks', url: 'https://tiregeeks.com' },
         areaServed: { '@type': 'Place', name: 'Land Park, Sacramento' },
         serviceType: 'Tire Sales & Installation',
-        offers: { '@type': 'Offer', priceCurrency: 'USD', price: '79', description: 'Tires from $79 per set of four' },
+        offers: { '@type': 'Offer', priceCurrency: 'USD', price: '279', description: 'Tires from $279 per set of four' },
       },
     ],
   };
@@ -199,9 +196,9 @@ export default function LandParkPage() {
             </h1>
             <p className="font-body text-[#CFCFCF] text-lg max-w-[760px] mx-auto mb-8">
               Land Park drivers don&apos;t have to cross town for custom truck builds, lowered cars, or
-              fitment-correct wheel work. Tire Geeks on Florin Road handles lifts ($299+), lowering
-              ($400+), custom wheels, and tires ($79+) — five minutes from Land Park via Sutterville
-              Road. Walk in Mon&ndash;Sat 9AM&ndash;7PM. Call (916) 800-8786.
+              fitment-correct wheel work. Tire Geeks on Florin Road handles lifts and leveling kits,
+              lowering work, custom wheel packages, and tires starting at $279 — five minutes from
+              Land Park via Sutterville Road. Walk in Mon&ndash;Sat 9AM&ndash;7PM. Call (916) 800-8786.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
@@ -305,8 +302,8 @@ export default function LandParkPage() {
             <p className="font-body text-[#AAAAAA] text-[15px] leading-relaxed mb-10 max-w-[900px]">
               Land Park brings a mix of vehicles to our shop &mdash; lifted Tacomas headed up to Tahoe,
               Civics and Camaros sitting on coilovers, daily-driven Camrys and F-150s due for tires.
-              Sacramento is truck country, but we build everything on the spectrum. Here&apos;s what
-              most Land Park drivers come in for:
+              We build across the whole spectrum, from a daily set of all-seasons to a full
+              lift-and-wheel build. Here&apos;s what most Land Park drivers come in for:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -316,15 +313,16 @@ export default function LandParkPage() {
               >
                 <div className="flex items-baseline justify-between mb-2">
                   <h3 className="font-heading text-white text-xl uppercase group-hover:text-[#D42B2B] transition-colors">
-                    Lift Kits
+                    Lift &amp; Leveling Kits
                   </h3>
                   <span className="font-heading text-[#D42B2B] text-sm uppercase tracking-wider">
-                    From $299
+                    Priced per vehicle
                   </span>
                 </div>
                 <p className="font-body text-[#AAAAAA] text-[15px] leading-relaxed mb-3">
                   Leveling kits to full 6-inch suspension lifts on F-150, Silverado, RAM, Tacoma,
-                  4Runner, and Wrangler. Post-lift alignment included.
+                  4Runner, and Wrangler. Rough Country, ReadyLIFT, BDS, Bilstein, Teraflex.
+                  Post-lift four-wheel alignment included on every install.
                 </p>
                 <span className="font-nav text-[12px] uppercase tracking-wider text-[#D42B2B]">
                   Lift Kit Installation Sacramento &rarr;
@@ -340,12 +338,13 @@ export default function LandParkPage() {
                     Lowering
                   </h3>
                   <span className="font-heading text-[#D42B2B] text-sm uppercase tracking-wider">
-                    From $400
+                    Priced per setup
                   </span>
                 </div>
                 <p className="font-body text-[#AAAAAA] text-[15px] leading-relaxed mb-3">
-                  Lowering springs, coilovers (BC Racing, KW, Tein), air ride. CVC 24008 compliant
-                  &mdash; frame stays above the rim. Low is a lifestyle.
+                  Lowering springs, coilovers, and air ride. BC Racing, KW, Tein, Eibach, H&amp;R,
+                  Air Lift Performance. CVC 24008 compliant &mdash; frame stays above the rim.
+                  Low is a lifestyle.
                 </p>
                 <span className="font-nav text-[12px] uppercase tracking-wider text-[#D42B2B]">
                   Lowering Services Sacramento &rarr;
@@ -361,13 +360,13 @@ export default function LandParkPage() {
                     Custom Wheels
                   </h3>
                   <span className="font-heading text-[#D42B2B] text-sm uppercase tracking-wider">
-                    From $150 / wheel
+                    By brand &amp; size
                   </span>
                 </div>
                 <p className="font-body text-[#AAAAAA] text-[15px] leading-relaxed mb-3">
-                  Tire &amp; wheel packages from $599. Fitment dialed in with hub-centric rings,
-                  exact offset, and verified caliper clearance. Fuel, Method, KMC, Moto Metal, XD,
-                  American Force.
+                  Fitment dialed in with hub-centric rings, exact offset, and verified caliper
+                  clearance. Fuel, Method, KMC, Moto Metal, XD, American Force, Black Rhino in
+                  stock across the wall.
                 </p>
                 <span className="font-nav text-[12px] uppercase tracking-wider text-[#D42B2B]">
                   Custom Wheels Sacramento &rarr;
@@ -383,7 +382,7 @@ export default function LandParkPage() {
                     Tires
                   </h3>
                   <span className="font-heading text-[#D42B2B] text-sm uppercase tracking-wider">
-                    From $79 / set of 4
+                    From $279 / set of 4
                   </span>
                 </div>
                 <p className="font-body text-[#AAAAAA] text-[15px] leading-relaxed mb-3">
